@@ -1,31 +1,62 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
 using System;
 
-    namespace RectangleApplication {
-      class Rectangle {
-        //member variables
+namespace RectangleApp
+{
+    
+    class Rectangle {
         public double length;
         public double width;
-
-        public double GetArea() {
-          return length * width;
+        
+        public double GetArea () {
+            return length * width;
         }
-
+        
         public void Display () {
-          Console.WriteLine("Length: {0}", length);
-          Console.WriteLine("Width: {0}", width);
-          Console.WriteLine("Area: {0}", GetArea());
-        }        
-      }
+            Console.WriteLine("Lenght: {0}", length);
+            Console.WriteLine("Width: {0}", width);
+            Console.WriteLine("Area: {0}", GetArea());
+            Console.WriteLine("Press Enter to continue");
+            Console.ReadLine();
+        }
+    }
     
-    class Program
+    class Square {
+        private double Slength;
+        private double Swidth;
+        
+        public double SquareArea () {
+            return Slength * Swidth;
+        }
+        
+        public void GetSDetails () {
+            Console.WriteLine("Enter length: {0}", Slength);
+            Slength = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter width: {0}", Swidth);
+            Swidth = Convert.ToDouble(Console.ReadLine());
+        }
+        
+        public void DisplaySquare () {
+            Console.WriteLine("Square area: {0}", SquareArea());
+        }
+    }
+    
+  public class HelloWorld {
+        public static void Main(string[] args)
     {
-      public static void Main(string[] args)
-    {
-      Rectangle r = new Rectangle();
-      r.length = 4.5;
-      r.width = 3.5;
-      r.Display();
-      Console.ReadLine();
+        Console.WriteLine ("---------RECTANGLE APPLICATION-------");
+        
+        Rectangle MyRec = new Rectangle();
+        MyRec.length = 3.1;
+        MyRec.width = 4.1;
+        MyRec.Display();
+        
+        Square s = new Square();
+        s.GetSDetails();
+        s.DisplaySquare();
+        s.SquareArea();
     }
   }
 }
