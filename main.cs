@@ -1,5 +1,6 @@
 using System;
 using RectangleApp;
+using PolymorphismApplication;
 
 namespace RectangleApp
 {
@@ -42,6 +43,22 @@ namespace RectangleApp
     }
 }
 
+namespace PolymorphismApplication {
+    class PrintData {
+        public void print(int i) {
+            Console.WriteLine("Printing int: {0}", i);
+        }
+        
+       public void print(double f) {
+            Console.WriteLine("Printing float: {0}", f);
+        }
+        
+        public void print(string s) {
+            Console.WriteLine("Printing int: {0}", s);
+        }
+    }
+}
+
   public class MyApp {
         public static void Main(string[] args)
     {
@@ -51,10 +68,21 @@ namespace RectangleApp
         MyRec.length = 3.1;
         MyRec.width = 4.1;
         MyRec.Display();
-        
+
+        Console.WriteLine ("---------SQUARE APPLICATION-------");
         Square s = new Square();
         s.GetSDetails();
         s.DisplaySquare();
         s.SquareArea();
+
+        //Polymorphism using Functional overloading 
+        Console.WriteLine("--------POLYMORPHISM STARTS HERE----------");
+        PrintData p = new PrintData();
+        //print integer
+        p.print(4);
+        //print float
+        p.print(4.9);
+        //print string
+        p.print("Hello there");
     }
   }
