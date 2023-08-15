@@ -1,7 +1,5 @@
-// Online C# Editor for free
-// Write, Edit and Run your C# code using C# Online Compiler
-
 using System;
+using RectangleApp;
 
 namespace RectangleApp
 {
@@ -42,8 +40,9 @@ namespace RectangleApp
             Console.WriteLine("Square area: {0}", SquareArea());
         }
     }
-    
-  public class HelloWorld {
+}
+
+  public class MyApp {
         public static void Main(string[] args)
     {
         Console.WriteLine ("---------RECTANGLE APPLICATION-------");
@@ -59,4 +58,3 @@ namespace RectangleApp
         s.SquareArea();
     }
   }
-}
